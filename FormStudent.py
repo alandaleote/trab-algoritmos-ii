@@ -21,7 +21,7 @@ class FormStudent:
             country= self.valores['txtCountry']
             module = self.valores['txtModule']
             stud.country = country.upper()
-            stud.module = module.upepr()
+            stud.module = module.upper()
             
             return stud
         else:

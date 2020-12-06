@@ -1,15 +1,15 @@
 import mysql.connector
-from FormStudent import FormStudent
-from Student import Student
+from FormTeacher import FormTeacher
+from Teacher import Teacher
 
 conn = mysql.connector.connect(host='localhost', database='english_school', user='root', password='')
 if conn.is_connected():
-    form = FormStudent()
-    student = form.show()
+    form = FormTeacher()
+    teacher = form.show()
 
-    if student:
-        query = "INSERT INTO students (name, country, module) VALUES ( "
-        query += " '" + student.name + "', '"  + student.country + "', '" +  student.module+ " ')"
+    if teacher:
+        query = "INSERT INTO teachers (name, country, classes) VALUES ( "
+        query += " '" + teacher.name + "', '"  + teacher.country + "', '" +  teacher.classes + " ')"
         cursor = conn.cursor()
         cursor.execute( query ) 
         conn.commit()
