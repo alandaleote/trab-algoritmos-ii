@@ -6,14 +6,13 @@ from Student import Student
 conn = mysql.connector.connect(host='localhost', database='english_school', user='root', password='')
 if conn.is_connected():
     form = FormStudent()
-    produto = form.show()
+    student = form.show()
 
-    if produto != None:
-        query = "INSERT INTO students (name, country,module) VALUES ( "
-        query += " '" + students.name + "' ,'"  + students.name + "' , '" +  students.module+ " ) "
-
+    if student:
+        query = "INSERT INTO students (name, country, module) VALUES ( "
+        query += " '" + student.name + "', '"  + student.country + "', '" +  student.module+ " ')"
         cursor = conn.cursor()
-        cursor.execute( query )
+        cursor.execute( query ) 
         conn.commit()
         cursor.close()
         conn.close()
