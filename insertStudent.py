@@ -8,8 +8,7 @@ if conn.is_connected():
     student = form.show()
 
     if student:
-        query = "INSERT INTO students (name, country, module) VALUES ( "
-        query += " '" + student.name + "', '"  + student.country + "', '" +  student.module+ " ')"
+        query = "INSERT INTO students (name, country, module, weekday) VALUES ('{}', '{}', '{}', '{}')".format(student.name, student.country, student.module, student.weekday)
         cursor = conn.cursor()
         cursor.execute( query ) 
         conn.commit()
