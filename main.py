@@ -1,8 +1,6 @@
 import PySimpleGUI as gui
 from insertClass import insertClass
-
-
-
+gui.theme('Dark Brown')
 class FormMenu:
     def __init__(self):
         conteudo = [
@@ -25,6 +23,7 @@ class FormMenu:
             pass
         else:
             input('Opção inválida! [Enter]')
+            "arquivo"
        
 
 
