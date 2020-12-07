@@ -4,7 +4,7 @@ conn = mysql.connector.connect(host='localhost', database='english_school', user
 if conn.is_connected():
     cursor = conn.cursor()
 
-    cursor.execute("SELECT s.name, s.module, c.teachername, c.weekday FROM students s join classes c on (students.module = classes.module) order by s.module")
+    cursor.execute("SELECT s.name, c.module, c.teachername, c.weekday FROM students s join classes c on (s.module = c.module) order by s.module")
     result = cursor.fetchall()
 
     for data in result:
