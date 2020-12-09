@@ -7,3 +7,14 @@ class Teacher(Person):
         self.module = module
         self.weekday = weekday
         
+    def setModule(self, module):
+        self.module = module
+
+    def getModule(self):
+        return self.odule
+    
+    def setWeekday(self, weekday):
+        self.weekday = weekday
+
+    def getWeekday(self):
+        return self.weekday
