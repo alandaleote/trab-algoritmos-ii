@@ -1,6 +1,5 @@
 import mysql.connector
 from FormTeacher import FormTeacher
-from Teacher import Teacher
 
 def insertTeacher():
     conn = mysql.connector.connect(host='localhost', database='english_school', user='root', password='')

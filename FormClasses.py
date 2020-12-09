@@ -6,8 +6,8 @@ class FormClasses:
     def __init__(self):
         conteudo = [
             [gui.Text("Módulo: ") , gui.Input()],
-            [gui.Text("WeekDay: ") , gui.Input(key = 'txtWeekDay')],
-            [gui.Text("Teacher: "), gui.Input(key = 'txtTeacher')],
+            [gui.Text("Dia da semana: ") , gui.Input(key = 'txtWeekDay')],
+            [gui.Text("Professor: "), gui.Input(key = 'txtTeacher')],
             [gui.Button("Salvar ")]
         ]
         self.tela = gui.Window("Inserir turma").layout(conteudo)

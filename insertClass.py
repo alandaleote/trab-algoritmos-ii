@@ -10,7 +10,7 @@ def insertClass():
         if newclass:
             query = "INSERT INTO classes (module, weekday, teachername) VALUES ('{}', '{}', '{}')".format(newclass.module, newclass.weekday, newclass.teachername)
             cursor = conn.cursor()
-            cursor.execute( query ) 
+            cursor.execute( query )
             conn.commit()
             cursor.close()
             conn.close()

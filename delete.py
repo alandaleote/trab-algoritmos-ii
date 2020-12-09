@@ -1,6 +1,5 @@
 import mysql.connector
 
-
 def deleteStudent():
     conn = mysql.connector.connect(host='localhost', database='english_school', user='root', password='')
     if conn.is_connected():

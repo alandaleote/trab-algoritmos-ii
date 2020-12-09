@@ -4,7 +4,9 @@ from delete import deleteStudent
 from insertClass import insertClass
 from insertStudent import insertStudente
 from insertTeacher import insertTeacher
-from listStudents import listEstudents
+from listClasses import listClasses
+from listStudents import listStudents
+from listTeachers import listTeachers
 
 gui.theme('Dark Brown')
 
@@ -26,18 +28,24 @@ class FormMenu:
         elif escolha == '3':
             insertStudente()
         elif escolha == '4':
-            listEstudents()
+            listStudents()
         elif escolha == '5':
+            listTeachers()
+        elif escolha == '6':
+            listClasses()
+        elif escolha == '7':
             deleteStudent()
         else:
-            input('OpÃ§Ã£o invÃ¡lida! [Enter]')
+            input('Opcao Invalida! [Enter]')
 menu = '''
 
 1 - Inserir Turma                  
 2 - Inserir Professor              
 3 - Inserir Aluno                  
 4 - Listar Alunos
-5 - Deletar Estudantes                 
+5 - Listar Professor
+6 - Listar Classes
+7 - Deletar Estudantes                 
 
 Insira a sua escolha:
  '''
