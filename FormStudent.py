@@ -5,7 +5,7 @@ from Student import Student
 class FormStudent:
     def __init__(self):
         conteudo = [
-            [gui.Text("Nome: ", size=(12, 0)) , gui.Input()],
+            [gui.Text("Nome: ", size=(12, 0)) , gui.Input(key = 'txtName')],
             [gui.Text("País: ", size=(12, 0)) , gui.Input(key = 'txtCountry')],
             [gui.Text("Módulo: ", size=(12, 0)), gui.Input(key = 'txtModule')],
             [gui.Text("Dia da semana: ", size=(12, 0)), gui.Input(key = 'txtWeekday')],
@@ -15,16 +15,16 @@ class FormStudent:
 
     def show(self):
         self.button, self.valores = self.tela.Read()
-        name = self.valores[0]
+        name = self.valores[key = 'txtName']
         if len(name) > 3:
             stud = Student()
-            stud.name = name.upper()
+            stud.setName(name.upper())
             country= self.valores['txtCountry']
             module = self.valores['txtModule']
             weekday = self.valores['txtWeekday']
-            stud.country = country.upper()
-            stud.module = module.upper()
-            stud.weekday = weekday.upper()
+            stud.setCountry(country.upper())
+            stud.setModule(module.upper())
+            stud.setWeekday(weekday.upper())
             
             return stud
         else:

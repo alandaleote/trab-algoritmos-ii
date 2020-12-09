@@ -7,6 +7,18 @@ class Teacher(Person):
         self.module = module
         self.weekday = weekday
         
+    def setName(self, name):
+        self.name = name
+
+    def getName(self):
+        return self.name
+    
+    def setCountry(self, country):
+        self.country = country
+
+    def getCountry(self):
+        return self.country
+           
     def setModule(self, module):
         self.module = module
 

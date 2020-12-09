@@ -5,7 +5,7 @@ from Teacher import Teacher
 class FormTeacher:
     def __init__(self):
         conteudo = [
-            [gui.Text("Nome: ", size=(12, 0)) , gui.Input()],
+            [gui.Text("Nome: ", size=(12, 0)) , gui.Input(key = 'txtName')],
             [gui.Text("País: ", size=(12, 0)) , gui.Input(key = 'txtCountry')],
             [gui.Text("Módulo: ", size=(12, 0)), gui.Input(key = 'txtModule')],
             [gui.Text("Dia da semana: ", size=(12, 0)), gui.Input(key = 'txtWeekday')],
@@ -15,16 +15,16 @@ class FormTeacher:
 
     def show(self):
         self.button, self.valores = self.tela.Read()
-        name = self.valores[0]
+        name = self.valores['txtName']
         if len(name) != 0:
             teach = Teacher()
-            teach.name = name.upper()
+            teach.setName(name.upper())
             country= self.valores['txtCountry']
             module = self.valores['txtModule']
             weekday = self.valores['txtWeekday']
-            teach.country = country.upper()
-            teach.module = module.upper()
-            teach.weekday = weekday.upper()
+            teach.setCountry(country.upper())
+            teach.setModule(module.upper())
+            teach.setWeekday(weekday.upper())
             
             return teach
         else:
