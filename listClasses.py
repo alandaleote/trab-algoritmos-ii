@@ -11,9 +11,10 @@ def listClasses():
         listWidth = [20,20,20]
         for data in result:
             layout =[
-                [gui.Table(values= result, key='-LIST-', col_widths= listWidth,headings=listHeader,justification="left")],
+                [gui.Table(values= result, col_widths=listWidth, headings=listHeader, justification="left")],
                 [gui.Button('Exit')]]
-        window = gui.Window('Lista de Turmas ', layout)
+                
+        window = gui.Window('Lista de Turmas', layout)
         while True:  # Event Loop
             event, values = window.read()
             if event in (gui.WIN_CLOSED, 'Exit'):

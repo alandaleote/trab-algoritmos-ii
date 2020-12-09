@@ -5,10 +5,10 @@ from Student import Student
 class FormStudent:
     def __init__(self):
         conteudo = [
-            [gui.Text("Nome: ") , gui.Input()],
-            [gui.Text("País: ") , gui.Input(key = 'txtCountry')],
-            [gui.Text("Módulo: "), gui.Input(key = 'txtModule')],
-            [gui.Text("Dia da semana: "), gui.Input(key = 'txtWeekday')],
+            [gui.Text("Nome: ", size=(12, 0)) , gui.Input()],
+            [gui.Text("País: ", size=(12, 0)) , gui.Input(key = 'txtCountry')],
+            [gui.Text("Módulo: ", size=(12, 0)), gui.Input(key = 'txtModule')],
+            [gui.Text("Dia da semana: ", size=(12, 0)), gui.Input(key = 'txtWeekday')],
             [gui.Button("Salvar ")]
         ]
         self.tela = gui.Window("Formulário de Estudantes").layout(conteudo)

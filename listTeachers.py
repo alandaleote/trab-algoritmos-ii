@@ -7,9 +7,19 @@ def listTeachers():
 
         cursor.execute("SELECT t.name, t.country, t.module, t.weekday FROM teachers t order by t.name")
         result = cursor.fetchall()
-
-        for data in result:
-            print("Nome: {:<20} País: {:<20} Turma: {} - {:<15} ".format(data[0], data[1], data[2], data[3]))
+        listHeader = ["     Nome      ", "    Pais   ","     Turma    ", "    Dia da Semana   "]
+        listWidth = [20, 20, 20, 20]
+        for row in result:
+            layout =[
+                [gui.Table(values= result, col_widths=listWidth, headings=listHeader, justification="left")],
+                [gui.Button('Exit')]]
+                
+        window = gui.Window('Lista de Professores', layout)
+        while True:  # Event Loop
+            event, values = window.read()
+            if event in (gui.WIN_CLOSED, 'Exit'):
+                break
+            window.close()
 
         cursor.close()
         conn.close()
