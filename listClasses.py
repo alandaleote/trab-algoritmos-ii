@@ -9,7 +9,7 @@ def listClasses():
         result = cursor.fetchall()
 
         for data in result:
-            print("Módulo: {:>15} - {:>15} Professor {:>20}".format(data[0], data[1], data[2]))
+            print("Módulo: {} - {:<15} Professor {:<20}".format(data[0], data[1], data[2]))
 
         cursor.close()
         conn.close()

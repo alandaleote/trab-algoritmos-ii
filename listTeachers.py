@@ -9,7 +9,7 @@ def listTeachers():
         result = cursor.fetchall()
 
         for data in result:
-            print("Nome: {:>20} País: {:>20} Turma: {:>15} - {:>15} ".format(data[0], data[1], data[2], data[3]))
+            print("Nome: {:<20} País: {:<20} Turma: {} - {:<15} ".format(data[0], data[1], data[2], data[3]))
 
         cursor.close()
         conn.close()
