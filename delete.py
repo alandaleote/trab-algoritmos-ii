@@ -19,7 +19,6 @@ def deleteStudent():
         result = cursor.fetchall()
         for students in result:
             texto = str(students[0]) + ": " + students[1] + "-" + str(students[2])
-            print(texto)
         cursor.close()
         conn.close()
     else:
