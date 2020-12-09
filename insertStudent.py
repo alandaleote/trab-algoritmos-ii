@@ -1,7 +1,7 @@
 import mysql.connector
 from FormStudent import FormStudent
 
-def insertStudente():
+def insertStudent():
     conn = mysql.connector.connect(host='localhost', database='english_school', user='root', password='')
     if conn.is_connected():
         form = FormStudent()

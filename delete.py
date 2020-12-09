@@ -11,8 +11,8 @@ def deleteStudent():
         for students in result:
             texto = str(students[0]) + ": " + students[1] + "-" + str(students[2])
             print(texto)
-        id = input("Digite o id do estudante que deseja excluir: ")
-        cursor.execute("DELETE FROM students WHERE id= " + str(id))
+        id = input("Digite o nome do estudante que deseja excluir: ")
+        cursor.execute("DELETE FROM students WHERE name = '{}'".format(id.upper()))
         conn.commit()
 
         cursor.execute("SELECT * FROM students")

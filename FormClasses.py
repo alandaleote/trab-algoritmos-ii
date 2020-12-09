@@ -5,9 +5,9 @@ from Classes import Classes
 class FormClasses:
     def __init__(self):
         conteudo = [
-            [gui.Text("Módulo: ") , gui.Input()],
-            [gui.Text("Dia da semana: ") , gui.Input(key = 'txtWeekDay')],
-            [gui.Text("Professor: "), gui.Input(key = 'txtTeacher')],
+            [gui.Text("Módulo: ", size=(12, 0)) , gui.Input()],
+            [gui.Text("Dia da semana: ",size=(12, 0)) , gui.Input(key = 'txtWeekDay')],
+            [gui.Text("Professor: ", size=(12, 0)), gui.Input(key = 'txtTeacher')],
             [gui.Button("Salvar ")]
         ]
         self.tela = gui.Window("Inserir turma").layout(conteudo)

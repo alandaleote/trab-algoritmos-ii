@@ -2,14 +2,13 @@ import PySimpleGUI as gui
 
 from delete import deleteStudent
 from insertClass import insertClass
-from insertStudent import insertStudente
+from insertStudent import insertStudent
 from insertTeacher import insertTeacher
 from listClasses import listClasses
 from listStudents import listStudents
 from listTeachers import listTeachers
 
 gui.theme('Dark Brown')
-
 class FormMenu:
     def __init__(self):
         conteudo = [
@@ -26,7 +25,7 @@ class FormMenu:
         elif escolha == '2':
             insertTeacher()
         elif escolha == '3':
-            insertStudente()
+            insertStudent()
         elif escolha == '4':
             listStudents()
         elif escolha == '5':
@@ -38,7 +37,6 @@ class FormMenu:
         else:
             input('Opcao Invalida! [Enter]')
 menu = '''
-
 1 - Inserir Turma                  
 2 - Inserir Professor              
 3 - Inserir Aluno                  

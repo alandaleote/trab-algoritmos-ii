@@ -13,15 +13,12 @@ def listClasses():
             layout =[
                 [gui.Table(values= result, key='-LIST-', col_widths= listWidth,headings=listHeader,justification="left")],
                 [gui.Button('Exit')]]
-
         window = gui.Window('Lista de Turmas ', layout)
         while True:  # Event Loop
             event, values = window.read()
             if event in (gui.WIN_CLOSED, 'Exit'):
                 break
             window.close()
-            print("Módulo: {} - {:<15} Professor {:<20}".format(data[0], data[1], data[2]))
-            
         cursor.close()
         conn.close()
     else:
