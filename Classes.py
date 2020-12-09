@@ -6,4 +6,4 @@ class Classes:
         self.module = module
         self.weekday = weekday
         self.teachername = teachername
-    
+   

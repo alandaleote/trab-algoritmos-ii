@@ -5,7 +5,7 @@ class Person:
         self.country = country
 
     def setName(self, name):
-    self.name = name
+        self.name = name
 
     def getName(self):
         return self.name
