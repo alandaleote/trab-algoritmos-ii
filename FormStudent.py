@@ -15,7 +15,7 @@ class FormStudent:
 
     def show(self):
         self.button, self.valores = self.tela.Read()
-        name = self.valores[key = 'txtName']
+        name = self.valores['txtName']
         if len(name) > 3:
             stud = Student()
             stud.setName(name.upper())

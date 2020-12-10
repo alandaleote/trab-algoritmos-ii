@@ -23,7 +23,7 @@ class Student(Person):
         self.module = module
 
     def getModule(self):
-        return self.odule
+        return self.module
     
     def setWeekday(self, weekday):
         self.weekday = weekday
