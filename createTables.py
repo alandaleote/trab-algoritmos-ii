@@ -11,7 +11,7 @@ if conn.is_connected():
     # criando tabelas
     query = "CREATE TABLE IF NOT EXISTS students("
     query += " id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,"
-    query += " name VARCHAR(100) NOT NULL UNIQUE,"
+    query += " name VARCHAR(100) NOT NULL,"
     query += " country VARCHAR(50) NOT NULL,"
     query += " module VARCHAR(50) NOT NULL,"
     query += " weekday VARCHAR(50) NOT NULL );"
@@ -19,7 +19,7 @@ if conn.is_connected():
 
     query = "CREATE TABLE IF NOT EXISTS teachers("
     query += " id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,"
-    query += " name VARCHAR(100) NOT NULL UNIQUE,"
+    query += " name VARCHAR(100) NOT NULL,"
     query += " country VARCHAR(50) NOT NULL,"
     query += " module VARCHAR(50) NOT NULL,"
     query += " weekday VARCHAR(50) NOT NULL );"
