@@ -8,7 +8,7 @@ from listClasses import listClasses
 from listStudents import listStudents
 from listTeachers import listTeachers
 
-gui.theme('Dark Brown')
+gui.theme('Brown Blue')
 class FormMenu:
     def __init__(self):
         conteudo = [
